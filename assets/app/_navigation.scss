@@ -1,0 +1,11 @@
+@media screen and (min-width: $md) {
+	.ul--header--nav {
+		display: flex;
+		flex-wrap: wrap;
+	} 
+	.header--nav--item {
+		padding: $defaultMargin; 
+	}
+}
+
+

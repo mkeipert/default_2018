@@ -1,0 +1,42 @@
+/*------------------------------------*\
+  #VARIABLES
+\*------------------------------------*/
+
+// BREAKPOINTS
+
+$xsm:				320px;
+$sm:				480px;
+$md:				768px;
+$lg: 				1024px;
+$xlg:				1260px;
+
+// COLORS 
+
+$baseColor: 		#484849; /* Grau */
+$darkBaseColor: 	darken($baseColor, 20%);
+$lightBaseColor:	lighten($baseColor, 20%);
+$primaryColor: 		#881e3b; /* Logo-Rot */
+$darkPrimaryColor:	darken($primaryColor, 20%);
+$lightPrimaryColor:	#c91252;
+$secondaryColor:	$primaryColor;
+$darkSecondaryColor: darken($secondaryColor, 20%);
+$lightSecondaryColor: lighten($secondaryColor, 20%);
+$linkColor: 		$primaryColor;
+$linkHoverColor:	$secondaryColor;
+$linkActiveColor: 	darken($linkColor, 20%);
+$white: 			white;
+$backgroundColor:	$white;
+
+// FONTS
+
+$defaultFontFamily: 'Source Sans Pro', sans-serif;
+$secondaryFontFamily: 'Source Sans Pro', sans-serif;
+$defaultFontSize:	18px;
+$defaultLineHeight:	1.4em;
+$defaultLetterSpacing: 0em;
+
+// MARGINS & SIZES
+
+$defaultMargin: 	1rem;
+$defaultWidth: 		1440px;
+$button-size: 		2rem;

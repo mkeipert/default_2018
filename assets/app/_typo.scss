@@ -1,0 +1,78 @@
+/*------------------------------------*\
+  #TYPO
+
+  Headlines, Links etc.
+
+\*------------------------------------*/
+
+
+/* HEADLINES
+   ========================================================================== */
+
+h1 {
+    font-size: $defaultFontSize * 2;
+    font-weight: normal;
+    color: $baseColor;
+}
+h2 {
+    font-size: $defaultFontSize * 1.5;
+    font-weight: normal;
+    color: $secondaryColor;
+}
+h3 {
+    font-size: $defaultFontSize * 1.2;
+    color: $primaryColor;
+}
+h4, 
+h5, 
+h6 {
+    font-size: $defaultFontSize;
+    font-weight: 600;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: $defaultMargin 0;
+    line-height: $defaultLineHeight;
+}
+.section--header--headline {
+    display: inline-block;
+    background: $white;
+    padding: 0 $defaultMargin;
+    margin-top: -$defaultMargin * 3;
+}
+
+/* TEXT ELEMENTS
+   ========================================================================== */
+
+p {
+    margin-bottom: $defaultMargin;
+    line-height: $defaultLineHeight;
+}
+li {
+    margin-bottom: $defaultMargin;
+    line-height: $defaultLineHeight;
+}
+
+/* LINKS
+   ========================================================================== */
+
+a {
+    &:link, &:visited {
+        color: $linkColor; 
+        background-color: transparent;
+        text-decoration: none;
+        @include transition(all,.5s);
+    }
+    &:hover, &:focus, &:active {
+        color: $linkHoverColor;
+        outline: 0;   
+    }
+    &.active {
+        color: $linkActiveColor;
+    }
+}
+

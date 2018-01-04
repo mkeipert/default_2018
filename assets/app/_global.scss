@@ -1,0 +1,335 @@
+/*------------------------------------*\
+  #GLOBAL
+
+  Global Definitions, Reset and Helpers.
+
+\*------------------------------------*/
+
+
+/* RESET
+   ========================================================================== */
+
+html, 
+body, 
+div, span, 
+object, iframe, 
+h1, h2, h3, h4, h5, h6, p, 
+blockquote, 
+a, 
+big, small,
+cite, 
+em, strong, u,
+img, 
+q, s, 
+sub, sup, 
+center, 
+dl, dt, dd, ol, ul, li, 
+fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td, 
+article, aside, canvas, details, embed, figure, figcaption, 
+footer, header, hgroup, 
+menu, nav, output, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    outline: 0;
+}
+ol, ul {
+    list-style: none;
+    line-height: $defaultLineHeight;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote {
+    &:before, &:after {
+        content: "";
+        content: none;
+    }
+}
+q {
+    &:before, &:after {
+        content: "";
+        content: none;
+    }
+}    
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    line-height: $defaultLineHeight;
+}
+* {
+    @include box-sizing;
+}
+html {
+    font-family: sans-serif; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+audio,
+canvas,
+progress,
+video {
+    display: inline-block; /* 1 */
+    vertical-align: baseline; /* 2 */
+}
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+
+/* Embedded content
+   ========================================================================== */
+
+img {
+    border: 0;
+    width: 100%;
+    height: auto;
+}
+iframe, video {
+    border: 0;
+    width: 100%;
+    &.piwik_optout {
+        margin: $defaultMargin 0;
+    }
+}
+
+/* Grouping content
+   ========================================================================== */
+
+figure {
+    margin: 0 auto;
+}
+hr {
+    box-sizing: content-box;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $baseColor;
+    margin: $defaultMargin 0;
+    padding: 0;
+}
+
+
+/* Tables
+   ========================================================================== */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td,
+th {
+    padding: 0 $defaultMargin /2 0 0;
+}
+
+
+/* 
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* 
+   LAYOUTS 
+   ========================================================================== */
+
+body {
+    line-height: $defaultLineHeight;
+    font-size: $defaultFontSize;
+    font-family: $defaultFontFamily;
+    letter-spacing: $defaultLetterSpacing;
+    color: $darkBaseColor;
+}
+.container {
+    max-width: $defaultWidth;
+    margin:auto;
+    position: relative;
+}
+.row {
+    margin: $defaultMargin 0;
+    padding: $defaultMargin 0;
+}
+.col {
+    padding: $defaultMargin;
+    width: 100%;
+    @media screen and (min-width:$md) {
+        float: left;
+        padding: 0 $defaultMargin;
+    }
+}
+
+/* 
+   HELPERS 
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+.hidden {
+    display: none;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+    visibility: hidden;
+}
+.visible {
+    display: block;
+}
+
+/*
+ * Clearfix: contain floats
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.clearfix:after {
+    clear: both;
+}
+
+/* 
+ * FLOATS AND ORIENTATIONS */
+
+.float_left {
+    float: left;
+}
+.float_right {
+    float: right;
+}
+.align-right {
+    text-align: right;
+}
+.align-center {
+    text-align: center;
+}
+
+/*
+ * VERTICAL CENTERED
+ */
+
+.center-parent {
+    display: table;
+}
+.center-parent .center-child {
+    display: table-cell;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+}
+
+
+/* 
+ * COLUMNS */
+
+.two-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+}
+
+
+/* 
+   TYPO DEFAULTS 
+   ========================================================================== */
+
+b,
+strong {
+    font-weight: bold;
+}
+em,
+dfn {
+    font-style: italic;
+}
+big, 
+.big {
+    font-size: 120%;
+}
+small,
+.small {
+    font-size: 80%;
+}
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+p {
+    margin-bottom: $defaultMargin;
+    line-height: $defaultLineHeight;
+}
+figcaption {
+    font-size: $defaultFontSize * 0.8;
+    line-height: $defaultLineHeight * 2;
+}
+
+
+
+/* 
+   REPONSIVE 
+   ========================================================================== */
+
+
+.hide-on-sm {
+    display: none;
+    @media screen and (min-width: $md) {
+        display: block;
+    }
+}
+.hide-on-md {
+  display: block;
+  @media screen and (min-width: $md) {
+        display: none;
+  }
+}
+
+
+
